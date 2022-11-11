@@ -1,7 +1,7 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
+
 import Menu from "../src/components/Menu/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
@@ -15,7 +15,7 @@ function HomePage() {
     console.log(config.playlists)
     return (
         <>
-            <CSSReset />
+            {/*<CSSReset />*/}
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -60,6 +60,7 @@ function Banner() {
 }
 
 const StyledHeader = styled.div `
+    background-color: ${({ theme }) => theme.backgroundLevel1};
     img {
         width: 150px;
         height: 150px;
